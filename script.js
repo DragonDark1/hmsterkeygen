@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        keyCountLabel.innerText = `تعداد کلید ها: ${keyCount} برای بازی ${game.name} `;
+        keyCountLabel.innerText = `تعداد کلید ها: ${keyCount}  ${game.name} برای بازی`;
 
         progressBar.style.width = '0%';
         progressText.innerText = '0%';
