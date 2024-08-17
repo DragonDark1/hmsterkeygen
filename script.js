@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const games = {
         1: {
-            name: 'Riding Extreme 3D',
+            name: 'Bike Ride 3D',
             appToken: 'd28721be-fd2d-4b45-869e-9f253b554e50',
             promoId: '43e35910-c168-4634-ad4f-52fd764a843f',
         },
@@ -22,6 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Train Miner',
             appToken: '82647f43-3f87-402d-88dd-09a90025313f',
             promoId: 'c4480ac7-e178-4973-8061-9ed5b2e17954',
+        },
+        5: {
+            name: 'Merge Away',
+            appToken: '8d1cc2ad-e097-4b86-90ef-7a27e19fb833',
+            promoId: 'dc128d28-c45b-411c-98ff-ac7726fbaea4',
+        },
+        6: {
+            name: 'Twerk Race 3D',
+            appToken: '61308365-9d16-4040-8bb0-2f4a4c69074c',
+            promoId: '61308365-9d16-4040-8bb0-2f4a4c69074c'
         }
     };
 
@@ -158,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         progressBar.style.width = '0%';
         progressText.innerText = '0%';
-        progressLog.innerText = 'شروع ساخت کلید...';
+        progressLog.innerText = '...شروع ساخت کلید \n لطفا منتظر باشید';
         progressContainer.classList.remove('hidden');
         keyContainer.classList.add('hidden');
         generatedKeysTitle.classList.add('hidden');
@@ -191,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < 11; i++) {
                 await sleep(EVENTS_DELAY * delayRandom());
                 const hasCode = await emulateProgress(clientToken, game.promoId);
-                updateProgress(7 / keyCount, 'در حال ساخت کلید...');
+                updateProgress(7 / keyCount, '...در حال ساخت کلید');
                 if (hasCode) {
                     break;
                 }
@@ -199,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 const key = await generateKey(clientToken, game.promoId);
-                updateProgress(30 / keyCount, 'کلید ساخته شد...');
+                updateProgress(30 / keyCount, '...کلید ساخته شد');
                 return key;
             } catch (error) {
                 alert(`Failed to generate key: ${error.message}`);
