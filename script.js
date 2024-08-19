@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    const MAX_KEYS_PER_GAME_PER_DAY = 10;
+    const MAX_KEYS_PER_GAME_PER_DAY = 20;
     //const EVENTS_DELAY = 20000;
 
     const games = {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             appToken: 'd28721be-fd2d-4b45-869e-9f253b554e50',
             promoId: '43e35910-c168-4634-ad4f-52fd764a843f',
             eventsDelay: 22000,
-            attemptsNumber: 22,
+            attemptsNumber: 11,
         },
         2: {
             name: 'Chain Cube 2048',
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'My Clone Army',
             appToken: '74ee0b5b-775e-4bee-974f-63e7f4d5bacb',
             promoId: 'fe693b26-b342-4159-8808-15e3ff7f8767',
-            eventsDelay: 70000,
+            eventsDelay: 22000,
             attemptsNumber: 11,
         },
         4: {
