@@ -1,3 +1,4 @@
+
 function toggleTheme() {
     const html = document.documentElement;
     const themeIcon = document.getElementById('themeIcon');
